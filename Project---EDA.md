@@ -253,7 +253,7 @@ simply validates our previous choice of k = 50.
 
     ggplot(errors, aes(x=k_vec)) + geom_line(aes(y = errors_train), col = 'red') + geom_point(aes(y=errors_train), col = 'red') +  geom_line(aes(y=errors_test), col = 'blue') + geom_point(aes(y=errors_test),col='blue')
 
-![](Project---EDA_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![![unnamed-chunk-14-1](https://user-images.githubusercontent.com/26015263/115101442-2b52b380-9f12-11eb-800a-14ecc17ad5a9.png)
 
 SVM
 ===
