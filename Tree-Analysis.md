@@ -126,9 +126,8 @@ tree to generate a smaller model.
 tree.cp = rpart(Revenue ~ ., data = training, parms = list(split = "gini"), method = "class")
 plotcp(tree.cp)
 ```
-
-![](Tree-Analysis_files/figure-gfm/unnamed-chunk-4-1.png)<!-- --> A rule
-of thumb here is that you should probably choose the value of leftmost
+![unnamed-chunk-4-1](https://user-images.githubusercontent.com/26015263/115981002-c07f2900-a55e-11eb-867f-50b5533b2621.png)
+A rule of thumb here is that you should probably choose the value of leftmost
 value of **cp** where your relative error + the standard deviation falls
 below the cross-validation error. In our case, this would **cp** =
 0.012.
@@ -139,7 +138,8 @@ tree.cp2 = rpart(Revenue ~ ., training, parms = list(split = "gini"), method = "
 fancyRpartPlot(tree.cp2, cex = 0.7)
 ```
 
-![](Tree-Analysis_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![unnamed-chunk-5-1](https://user-images.githubusercontent.com/26015263/115981006-c96ffa80-a55e-11eb-80d2-80c0e7962cf6.png)
+
 
 ``` r
 # Errors
@@ -177,7 +177,7 @@ library(vip)
 vip(tree.cp2, geom = "col")
 ```
 
-![](Tree-Analysis_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![unnamed-chunk-6-1](https://user-images.githubusercontent.com/26015263/115981008-cd038180-a55e-11eb-80ac-08df34c06072.png)
 
 # Random Forests
 
@@ -263,7 +263,8 @@ importance(rf_Revenue)
 varImpPlot(rf_Revenue)
 ```
 
-![](Tree-Analysis_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![unnamed-chunk-7-1](https://user-images.githubusercontent.com/26015263/115981015-d1c83580-a55e-11eb-8fd3-8ee0504f27a5.png)
+
 
 ``` r
 # Errors
@@ -319,7 +320,8 @@ the amount of change is quite minimal.
 plot(ntree_vec, ntree_df$test_errors_vec, ylab = "Testing Error", xlab = "Number of trees")
 ```
 
-![](Tree-Analysis_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![unnamed-chunk-9-1](https://user-images.githubusercontent.com/26015263/115981019-d5f45300-a55e-11eb-8a9c-af0363e9c88d.png)
+
 
 ``` r
 # fit the final model
@@ -360,7 +362,8 @@ ada_shopping = gbm(Revenue ~ ., data = training, distribution = "adaboost", n.tr
 summary(ada_shopping)
 ```
 
-![](Tree-Analysis_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![unnamed-chunk-10-1](https://user-images.githubusercontent.com/26015263/115981022-d8ef4380-a55e-11eb-8ccf-a7d646e93441.png)
+
 
     ##                                             var     rel.inf
     ## PageValues                           PageValues 32.87144600
