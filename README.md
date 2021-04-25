@@ -20,7 +20,14 @@ It's important that, when doing a 70-30 split on the data, there is a balance in
 
 
 # Modeling 
+## KNN Cross-validation
 ![image](https://user-images.githubusercontent.com/26015263/115101462-5937f800-9f12-11eb-9990-4badf606aafd.png)
+
+## Decision Trees
+![unnamed-chunk-5-1](https://user-images.githubusercontent.com/26015263/115981036-f58b7b80-a55e-11eb-831c-0ce325c8fbf0.png)
+
+## Feature Importance
+![unnamed-chunk-6-1](https://user-images.githubusercontent.com/26015263/115981052-105df000-a55f-11eb-84b9-7ff6440a4df1.png)
 
 
 ## Classification Models Used
@@ -30,6 +37,7 @@ It's important that, when doing a 70-30 split on the data, there is a balance in
 * LDA
 * SVM
 * Random Forest
+* Adaboost
 
 ## Table of Model Performance
 
@@ -39,5 +47,8 @@ It's important that, when doing a 70-30 split on the data, there is a balance in
 | Logistic Regression |      0.1165701 |     0.1132739 |
 | KNN                 |      0.1093859 |     0.1091892 |
 | SVM                 |      0.0936269 |     0.1027027 |
+| Random Forest       |      0.0000000 |     0.0918919 |
+| Adaboost            |      0.0085747 |     0.1035135 |
 
-
+# Comments on PageValue as a feature
+PageValues is an incredibly important feature in this dataset for predicting revenue. The biggest problem here is that PageValues is computed by dividing the revenue of a shopping instance by the number of views a page gets. This inherently encodes revenue into the problem, and does not really reflect the volitional behavior of the shopper. In fact, PageValue by itself does a great job at classifying Revenue on its own (achieving about 10% error on the testing set).
