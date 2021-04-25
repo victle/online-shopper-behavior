@@ -282,7 +282,8 @@ errors = data.frame(errors_train, errors_test, k_vec)
 ggplot(errors, aes(x=k_vec)) + geom_line(aes(y = errors_train), col = 'red') + geom_point(aes(y=errors_train), col = 'red') +  geom_line(aes(y=errors_test), col = 'blue') + geom_point(aes(y=errors_test),col='blue')
 ```
 
-![](models_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![unnamed-chunk-14-1](https://user-images.githubusercontent.com/26015263/115977691-3e840580-a548-11eb-8190-5efeb7bed2b8.png)
+
 
 # SVM
 
